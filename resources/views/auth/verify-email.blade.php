@@ -39,6 +39,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        :root {
+            --coklat-color : #40342A;
+            --cream-color : #F2F0EB;
+            --putih-color : #fff;
+            --hitam-color : #000000;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -51,7 +57,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(90deg, #2c3e50, #bdc3c7);
+            background: linear-gradient(90deg, var(--coklat-color), var(--coklat-color));
         }
 
         .container {
@@ -76,6 +82,7 @@
             font-size: 24px;
             margin-bottom: 12px;
             font-weight: 500;
+            color: var(--coklat-color);
         }
 
         .container p {
@@ -104,7 +111,7 @@
             margin-top: 6px;
             width: 100%;
             padding: 10px;
-            background: #7494ec;
+            background: var(--coklat-color);
             border-radius: 4px;
             border: none;
             color: #fff;
@@ -120,7 +127,7 @@
             background: #fff;
             border-radius: 8px;
             border: none;
-            color: #7494ec;
+            color: var(--coklat-color);
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
@@ -129,13 +136,19 @@
         }
 
         .btn:hover {
-            background: #5a78d4;
+            background: var(--coklat-color);
+            font-weight: 600;
+            color: var(--putih-color);
+        }
+
+        .btn-logout:hover {
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="3.png" alt="Logo">
+        <img src="{{asset ('3.png')}}" alt="Logo">
         <h1>Verifikasi Email</h1>
         <p>Terima kasih telah mendaftar! Sebelum memulai, silakan verifikasi email Anda dengan mengeklik tautan yang kami kirimkan.</p>
 
@@ -148,7 +161,7 @@
         <!-- Form untuk mengirim ulang email verifikasi -->
         <form method="POST" action="{{ route('verification.send') }}">
             @csrf
-            <button type="submit" class="btn">Kirim Ulang Verifikasi Email</button>
+            <button type="submit" class="btn">Kirim Verifikasi Email</button>
         </form>
 
         <!-- Form untuk logout -->

@@ -33,6 +33,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        :root {
+            --coklat-color : #40342A;
+            --cream-color : #F2F0EB;
+            --putih-color : #fff;
+            --hitam-color : #000000;
+            --abu-color : #333;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -45,7 +53,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(90deg, #2c3e50, #bdc3c7);
+            background: linear-gradient(90deg, var(--coklat-color), var(--coklat-color));
         }
 
         .container {
@@ -70,6 +78,7 @@
             font-size: 36px;
             margin-bottom: 20px;
             font-weight: 600;
+            color: var(--coklat-color);
         }
 
         .container p {
@@ -97,17 +106,19 @@
         .btn {
             width: 100%;
             padding: 10px;
-            background: #7494ec;
+            background: var(--coklat-color);
             border-radius: 8px;
             border: none;
-            color: #fff;
+            color: var(--putih-color);
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: #5a78d4;
+            background: var(--coklat-color);
+            color: var(--putih-color);
+            font-weight: 600;
         }
     </style>
 </head>

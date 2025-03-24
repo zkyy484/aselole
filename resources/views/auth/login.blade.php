@@ -15,13 +15,12 @@
     {{-- <link rel="stylesheet" href="login.css"> --}}
     <style>
         :root {
-    --hitam-color: #000000;
-    --cream-color: #a69f95;
-    --cream-muda: #e9dcc8;
-    --abumuda-color: #7a7a7a;
-    --putih-color: #ffffff;
-    --abutua-color: #404040;
-}
+            --coklat-color : #40342A;
+            --cream-color : #F2F0EB;
+            --putih-color : #fff;
+            --hitam-color : #000000;
+            --abu-color : #333;
+        }
 
 * {
     margin: 0;
@@ -35,13 +34,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(40deg, var(--cream-muda), var(--cream-muda));
+    background: linear-gradient(40deg, var(--cream-color), var(--cream-color));
 }
 
 .container {
     position: relative;
-    width: 850px;
-    height: 550px;
+    width: 780px;
+    height: 480px;
     background: var(--putih-color);
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
@@ -56,7 +55,7 @@ body {
     background: var(--putih-color);
     display: flex;
     align-items: center;
-    color: var(--abutua-color);
+    color: var(--abu-color);
     text-align: center;
     padding: 40px;
     z-index: 1;
@@ -82,11 +81,12 @@ form {
 .container h1 {
     font-size: 36px;
     margin: -10px 0;
+    
 }
 
 .input-box {
     position: relative;
-    margin: 30px 0;
+    margin: 24px 0;
 }
 
 .input-box input {
@@ -97,13 +97,17 @@ form {
     border: none;
     outline: none;
     font-size: 16px;
-    color: var(--abutua-color);
+    color: var(--abu-color);
     font-weight: 500;
 }
 
 .input-box input::placeholder {
-    color: var(--abumuda-color);
+    color: var(--abu-color);
     font-weight: 400;
+}
+
+.form-box h1 {
+    color: var(--coklat-color);
 }
 
 .input-box i {
@@ -112,7 +116,7 @@ form {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: var(--abumuda-color);
+    color: var(--coklat-color);
 }
 
 .forgot-link {
@@ -128,7 +132,7 @@ form {
 .btn {
     width: 100%;
     height: 48px;
-    background: var(--abutua-color);
+    background: var(--coklat-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border: none;
@@ -151,10 +155,10 @@ form {
 .social-icon a {
     display: inline-flex;
     padding: 10px;
-    border: 2px solid var(--cream-color);
+    border: 2px solid var(--abu-color);
     border-radius: 8px;
     font-size: 24px;
-    color: var(--abutua-color);
+    color: var(--coklat-color);
     text-decoration: none;
     margin: 0 8px;
 }
@@ -171,7 +175,7 @@ form {
     left: -250%;
     width: 300%;
     height: 100%;
-    background: var(--abutua-color);
+    background: var(--coklat-color);
     border-radius: 150px;
     z-index: 2;
     transition: 1.8s ease-in-out;
@@ -296,10 +300,12 @@ form {
                 <h1>Login</h1>
                 <div class="input-box">
                     <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope' ></i>
                 </div>
             
                 <div class="input-box">
                     <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
                 
                 <div class="forgot-link">
@@ -329,14 +335,17 @@ form {
                 <h1>Register</h1>
                 <div class="input-box">
                     <input type="text" name="name" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
                 </div>
             
                 <div class="input-box">
                     <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope' ></i>
                 </div>
             
                 <div class="input-box">
                     <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
                 </div>            
                 
                 <button type="submit" class="btn">Register</button>
